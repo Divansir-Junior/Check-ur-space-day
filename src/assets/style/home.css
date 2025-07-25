@@ -1,6 +1,13 @@
 header { 
-    top: 0px;
     width: 100%;
     background-color: rgb(26, 26, 52);
+    height: 100px;
+}
+
+header img { 
+    position: fixed;
+    top: 5px;
+    left: 20px;
+    width: 100px;
     height: 100px;
 }
