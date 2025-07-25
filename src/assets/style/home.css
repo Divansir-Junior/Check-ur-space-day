@@ -1,13 +1,16 @@
-header { 
+header {
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: rgb(234, 234, 234);
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header img { 
-    position: fixed;
-    top: 5px;
-    left: 20px;
+header img {
     width: 100px;
     height: 100px;
+
 }
