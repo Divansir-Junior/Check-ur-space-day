@@ -55,7 +55,7 @@ footer .githubIcon {
   right: 20px;
 }
 
-/* Alinha lado a lado*/
+/* Alinha lado a lado */
 .input-group { 
   display: flex;
   flex-direction: row;
@@ -64,7 +64,7 @@ footer .githubIcon {
 
 }
 
-/* Campo de data*/
+/* Campo de data */
 .input-group input[type="date"] {
   font-size: 1rem;
   border-radius: 4px;
@@ -76,7 +76,7 @@ footer .githubIcon {
 
 /* Botão de pesquisar a imagem */
 .input-group button { 
-  padding: 8px 15px;
+  padding: 8px 16px;
   height: auto;
   font-size: 1rem;
   border-radius: 4px;
@@ -89,4 +89,10 @@ footer .githubIcon {
 .input-group button:hover {
   border-color: #FFFF;
   color: #0000;
+}
+
+/* Título da imagem da API */
+#title {
+  margin: 20px 0 15px;
+  font-size: 1.8rem;
 }
