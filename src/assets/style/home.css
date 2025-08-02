@@ -77,21 +77,36 @@ footer .githubIcon {
 }
 
 /* Botão de pesquisar a imagem */
-.input-group button { 
-  padding: 8px 16px;
-  height: auto;
+button {
+  font-family: inherit;
   font-size: 1rem;
+  padding: 8px 16px;
   border-radius: 4px;
-  background-color: #0000;
-  color: #FFFF;
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: 0.3s;
+  background-color: transparent;
+  color: rgb(37, 30, 30);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 40px;
+  box-sizing: border-box;
+}
+
+.input-group button {
+  border-color: #8a2be2;
 }
 
 .input-group button:hover {
-  border-color: #FFFF;
-  color: #0000;
+  border-color: #fff;
+  color: #af04ff;
+  background-color: transparent;
 }
+
+
+
 
 /* Título da imagem da API */
 #title {
