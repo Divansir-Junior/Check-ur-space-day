@@ -75,7 +75,7 @@ button {
   border: 1px solid transparent;
   cursor: pointer;
   background-color: transparent;
-  color: rgb(37, 30, 30);
+  color: rgb(250, 247, 247);
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
@@ -86,7 +86,7 @@ button {
 }
 
 .input-group button {
-  border-color: #8a2be2;
+  border: 1px solid rgb(135, 127, 127);
 }
 
 .input-group button:hover {
