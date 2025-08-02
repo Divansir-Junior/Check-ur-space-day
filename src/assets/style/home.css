@@ -50,6 +50,7 @@ body {
 
 /* Campo de data */
 .input-group input[type="date"] {
+  border: 1px solid rgb(135, 127, 127);
   font-size: 1rem;
   border-radius: 4px;
   padding: 8px;
