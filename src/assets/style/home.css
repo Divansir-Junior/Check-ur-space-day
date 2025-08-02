@@ -110,7 +110,7 @@ button {
 #title {
   margin: 20px 0 15px;
   font-size: 1.8rem;
-  color: black;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   font-family: "DM Sans", sans-serif;
 }
