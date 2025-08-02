@@ -112,6 +112,8 @@ button {
 #title {
   margin: 20px 0 15px;
   font-size: 1.8rem;
+  color: black;
+  text-transform: uppercase;
 }
 
 /* ====================== CONTEÚDO DO FETCH ======================= */
