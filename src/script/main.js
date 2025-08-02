@@ -1,56 +1,52 @@
 let imgApi = document.getElementById("imgApi");
 let title = document.getElementById("title");
 let container = document.getElementById("container");
-//Manda a data para o fetch
+
+// Manda a data para o fetch
 function sendDate() {
-    const btnSend = document.getElementById("btnSend").addEventListener("click",() => {
-        checkDate();
-        fetchAPOD();
-        changeContent();
-    })
-}
-
-// Checa se é uma data válida
-function checkDate() {
+  document.getElementById("btnSend").addEventListener("click", async () => {
     const date = document.getElementById("dateInput").value;
-    if(!date) {
-        alert("INVALID DATA");
+
+    if (!date) {
+      alert("DATA INVÁLIDA");
+      return; // Impede o resto
     }
-    console.log("DATA"  + date.value);
-   
-}
-// Faz a conexão com a API da Nasa .
-async function fetchAPOD() {
-    const dateInput = document.getElementById("dateInput").value;
-    const PUBLIC_API_KEY = "IZDvfoMZnJxWaKw8GsBzNSXSdEZKsDWdVLGGDkjq";
-    const url = `https://api.nasa.gov/planetary/apod?api_key=${PUBLIC_API_KEY}&date=${dateInput}`;
-    
-    try {
-        const response = await fetch(url);
 
-        if(!response.ok) {
-            throw new Error(`ERROR: ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        //Atuliza o conteúdo
-        imgApi.src = data.url;
-
-        title.textContent =  data.title;
-
-    } catch(error) {
-        console.log("Error to fetch data" + error);
-    }
+    await fetchAPOD(date);   // passa a data válida
+    changeContent();         // altera o layout
+  });
 }
 
-// Muda o tamanho dos componentes .
+// Faz a conexão com a API da Nasa
+async function fetchAPOD(date) {
+  const PUBLIC_API_KEY = "IZDvfoMZnJxWaKw8GsBzNSXSdEZKsDWdVLGGDkjq";
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${PUBLIC_API_KEY}&date=${date}`;
+
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Erro: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Atualiza o conteúdo
+    imgApi.src = data.url;
+    title.textContent = data.title;
+  } catch (error) {
+    console.error("Erro ao buscar dados:", error);
+  }
+}
+
+// Muda o tamanho dos componentes
 function changeContent() {
-    imgApi.style.display = "block";
-    imgApi.style.height = "500px";
+  imgApi.style.display = "block";
+  imgApi.style.height = "500px";
 
-    container.style.width = "400px";
-    container.style.height = "700px";
-
+  container.style.width = "400px";
+  container.style.height = "700px";
 }
+
+
 sendDate();
