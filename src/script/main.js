@@ -1,10 +1,12 @@
 let imgApi = document.getElementById("imgApi");
 let title = document.getElementById("title");
+let container = document.getElementById("container");
 //Manda a data para o fetch
 function sendDate() {
     const btnSend = document.getElementById("btnSend").addEventListener("click",() => {
         checkDate();
         fetchAPOD();
+        changeContent();
     })
 }
 
@@ -34,13 +36,21 @@ async function fetchAPOD() {
 
         //Atuliza o conteúdo
         imgApi.src = data.url;
-        imgApi.style.display = 'block';
-        imgApi.style.height = '500px';
 
         title.textContent =  data.title;
-        
+
     } catch(error) {
         console.log("Error to fetch data" + error);
     }
+}
+
+// Muda o tamanho dos componentes .
+function changeContent() {
+    imgApi.style.display = "block";
+    imgApi.style.height = "500px";
+
+    container.style.width = "950px";
+    container.style.height - "700px"
+
 }
 sendDate();
