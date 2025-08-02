@@ -35,38 +35,12 @@ body {
     text-transform: uppercase;
 }
 
-footer { 
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
-  height: 50px;
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-}
-
-footer img { 
-  width: 60px;
-  height:60px;
-}
-
-footer .githubIcon { 
-  width: 60px;
-  height:60px;
-  position: fixed;
-  right: 20px;
-}
-
 /* Alinha lado a lado */
 .input-group { 
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 12px;
-
 }
 
 /* Campo de data */
@@ -108,8 +82,14 @@ button {
   background-color: transparent;
 }
 
-
-
+/* ====================== CONTEÚDO DO FETCH ======================= */
+.container { 
+  max-width: 600px;
+  max-height: 600px;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
 
 /* Título da imagem da API */
 #title {
@@ -120,15 +100,6 @@ button {
   font-family: "DM Sans", sans-serif;
 }
 
-/* ====================== CONTEÚDO DO FETCH ======================= */
-.container { 
-  max-width: 600px;
-  max-height: 600px;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-}
-
 /* Imagem da API */
 #imgApi {
   max-width: 100%;
@@ -136,4 +107,30 @@ button {
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
   display: none;
+}
+
+/* ===========================  FOOTER =================================== */
+footer { 
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img { 
+  width: 60px;
+  height:60px;
+}
+
+footer .githubIcon { 
+  width: 60px;
+  height:60px;
+  position: fixed;
+  right: 20px;
 }
