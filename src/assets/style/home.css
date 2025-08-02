@@ -96,7 +96,7 @@ button {
 
 /* ====================== CONTEÚDO DO FETCH ======================= */
 .container { 
-  background-color: #46424a;
+  background-color: transparent;
   gap: 12px;
   width: 100%;
   display: flex;
