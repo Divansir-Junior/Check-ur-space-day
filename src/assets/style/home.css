@@ -13,11 +13,13 @@ body {
 
 /*==================================== |CONTEÚDO PRINCIPAL| ============================================================*/
 .main { 
-    background-color: #0000;
+    background-color: rgba(37, 33, 33, 0.3);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     margin-top: 10%;
     margin-bottom: 20px;
     width: 100%;
+    max-width: 800px;
     padding: 15px;
     color: #FFFF;
     text-align: center;
