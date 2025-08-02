@@ -49,8 +49,8 @@ function changeContent() {
     imgApi.style.display = "block";
     imgApi.style.height = "500px";
 
-    container.style.width = "950px";
-    container.style.height - "700px"
+    container.style.width = "400px";
+    container.style.height = "700px";
 
 }
 sendDate();
