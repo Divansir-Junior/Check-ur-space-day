@@ -9,11 +9,11 @@ function sendDate() {
 
     if (!date) {
       alert("DATA INVÁLIDA");
-      return; // Impede o resto
+      return; 
     }
 
-    await fetchAPOD(date);   // passa a data válida
-    changeContent();         // altera o layout
+    await fetchAPOD(date);   
+    changeContent();         
   });
 }
 
