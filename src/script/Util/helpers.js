@@ -1,10 +1,10 @@
 // Vai até o rep do Git
-function goToGithub(element, url) {
+export function goToGithub(element, url) {
   if (!url) return;
   window.open(url, "_blank"); 
 }
 
-function zoomImage(imageElement) {
+export function zoomImage(imageElement) {
   const overlay = document.getElementById("overlay");
   const zoomedImage = document.getElementById("imagemZoom");
 
