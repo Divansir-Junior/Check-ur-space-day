@@ -1,6 +1,6 @@
 let imgApi = document.getElementById("imgApi");
 let title = document.getElementById("title");
-let container = document.getElementById("container");
+let container = document.querySelector(".container");
 
 // Manda a data para o fetch
 function sendDate() {
@@ -44,8 +44,8 @@ function changeContent() {
   imgApi.style.display = "block";
   imgApi.style.height = "500px";
 
-  container.style.width = "400px";
-  container.style.height = "700px";
+  container.style.width = "700px";
+  container.style.height = "600px";
 }
 
 
