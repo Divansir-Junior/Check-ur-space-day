@@ -107,6 +107,21 @@ button {
   padding: 16px;
 }
 
+/* Fundo desfocado */
+.overlay { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
 /* Título da imagem da API */
 #title {
   margin: 20px 0 15px;
