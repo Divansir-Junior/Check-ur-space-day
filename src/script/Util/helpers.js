@@ -4,18 +4,11 @@ function goToGithub(element, url) {
   window.open(url, "_blank");
 }
 
-// Exibe a imagem em zoom
-// Vai até o repositório do GitHub
-function goToGithub(element, url) {
-  if (!url) return;
-  window.open(url, "_blank");
-}
 
 // Exibe a imagem em zoom
 function zoomImage(imageElement) {
   const overlay = document.getElementById("overlay");
   const zoomedImage = document.getElementById("imagemZoom");
-
   hideFooter();
 
   zoomedImage.src = imageElement.src;
