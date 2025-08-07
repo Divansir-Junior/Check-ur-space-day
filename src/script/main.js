@@ -12,6 +12,8 @@ function sendDate() {
       return; 
     }
 
+    const isValid = isDataValid(date);
+    if (!isValid) return;;
     await fetchAPOD(date);   
     changeContent();         
   });
@@ -38,6 +40,22 @@ async function fetchAPOD(date) {
     console.error("Erro ao buscar dados:", error);
   }
 }
+
+function isDataValid(dateString) {
+  const today = new Date();
+  const actualYear = today.getFullYear();
+
+  const dataValue = new Date(dateString);
+  const yearValue = dataValue.getFullYear();
+
+  if (yearValue > actualYear) {
+    alert("YEAR INVALID");
+    return false;
+  }
+
+  return true;
+}
+
 
 // Muda o tamanho dos componentes
 function changeContent() {
