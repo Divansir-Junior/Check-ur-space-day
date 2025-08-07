@@ -159,7 +159,7 @@ footer {
   background-color: transparent;
   display: flex;
   flex-direction: row;
-  z-index: 999;
+
   justify-content: center;
   align-items: center;
 }
