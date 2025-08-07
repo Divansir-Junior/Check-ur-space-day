@@ -27,6 +27,13 @@ async function fetchAPOD(date) {
   try {
     const response = await fetch(url);
 
+      // Checa se tem dados válidos para fazer o fetch 
+     if(response.status === 400) {
+      title.textContent += "NO IMAGE";
+      title.style.color = "red"
+      imgApi.style.visibility = "hidden";
+    }
+
     if (!response.ok) {
       throw new Error(`Erro: ${response.status}`);
     }
@@ -41,6 +48,7 @@ async function fetchAPOD(date) {
   }
 }
 
+//Checa se o ano é maior que o ano atual
 function isDataValid(dateString) {
   const today = new Date();
   const actualYear = today.getFullYear();
@@ -55,7 +63,6 @@ function isDataValid(dateString) {
 
   return true;
 }
-
 
 // Muda o tamanho dos componentes
 function changeContent() {

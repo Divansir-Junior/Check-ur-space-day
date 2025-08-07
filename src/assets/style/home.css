@@ -130,14 +130,12 @@ body.blurred {
   -webkit-backdrop-filter: blur(15px);
 }
 
-
 .imagem-expandida {
   width: 90%;
   height: 80%;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(18, 17, 17, 0.3);
 }
-
 
 /* Título da imagem da API */
 #title {
