@@ -11,6 +11,19 @@ This is an **open-source project** aimed at interactivity and the discovery of p
 Feel free to explore, use, and contribute! 
 ---
 
+## Link to the website : 
+<div>
+<a href="https://check-ur-space-day.vercel.app/"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Acesse o projeto CHECK UR SPACE DAY">
+  <img src="https://img.shields.io/badge/CHECK%20UR%20SPACE%20DAY-black?style=for-the-badge&logo=nasa"
+       alt="Badge do projeto CHECK UR SPACE DAY" />
+</a>
+</div>
+
+---
+
 ## ✨ Features
 - 🔭 View daily astronomy images from NASA  
 - 📅 Search by specific date  
