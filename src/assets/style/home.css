@@ -24,7 +24,22 @@ body.blurred {
   -webkit-backdrop-filter: blur(45px);
 }
 
+header {
+  width: 100%;
+  background-color: transparent;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
 
+header .logo {
+   width: 60px;
+  height:60px;
+  cursor: pointer;
+  margin-top: 5px;
+}
 /*==================================== |CONTEÚDO PRINCIPAL| ============================================================*/
 .main { 
     background-color: rgba(37, 33, 33, 0.3);
@@ -153,31 +168,4 @@ body.blurred {
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
   display: none;
-}
-
-/* ===========================  FOOTER =================================== */
-footer { 
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-
-  justify-content: center;
-  align-items: center;
-}
-
-footer img { 
-  width: 60px;
-  height:60px;
-}
-
-footer .githubIcon { 
-  cursor: pointer;
-  width: 60px;
-  height:60px;
-  position: fixed;
-  right: 20px;
 }

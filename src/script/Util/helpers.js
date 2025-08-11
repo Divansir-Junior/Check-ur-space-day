@@ -9,7 +9,6 @@ function goToGithub(element, url) {
 function zoomImage(imageElement) {
   const overlay = document.getElementById("overlay");
   const zoomedImage = document.getElementById("imagemZoom");
-  hideFooter();
 
   zoomedImage.src = imageElement.src;
   overlay.style.display = "flex";
@@ -28,25 +27,7 @@ function closeZoom(event) {
   if (event.target !== zoomedImage) {
     overlay.style.display = "none";
     zoomedImage.src = "";
-
-    showFooter();
-
+    
     window.removeEventListener("click", closeZoom);
-  }
-}
-
-// Oculta o rodapé
-function hideFooter() {
-  const footer = document.querySelector("footer");
-  if (footer) {
-    footer.style.display = "none";
-  }
-}
-
-// Exibe o rodapé
-function showFooter() {
-  const footer = document.querySelector("footer");
-  if (footer) {
-    footer.style.display = "flex";
   }
 }

@@ -19,7 +19,7 @@ function sendDate() {
   });
 }
 
-// Faz a conexão com a API da Nasa
+// Faz a conexão com a API da NASA
 async function fetchAPOD(date) {
   const PUBLIC_API_KEY = "IZDvfoMZnJxWaKw8GsBzNSXSdEZKsDWdVLGGDkjq";
   const url = `https://api.nasa.gov/planetary/apod?api_key=${PUBLIC_API_KEY}&date=${date}`;
@@ -27,11 +27,12 @@ async function fetchAPOD(date) {
   try {
     const response = await fetch(url);
 
-      // Checa se tem dados válidos para fazer o fetch 
-     if(response.status === 400) {
-      title.textContent += "NO IMAGE";
-      title.style.color = "red"
+    // Trata caso de resposta 400 (data sem imagem disponível)
+    if (response.status === 400) {
+      title.textContent = "NO IMAGE";
+      title.style.color = "red";
       imgApi.style.visibility = "hidden";
+      return; 
     }
 
     if (!response.ok) {
@@ -43,10 +44,16 @@ async function fetchAPOD(date) {
     // Atualiza o conteúdo
     imgApi.src = data.url;
     title.textContent = data.title;
+    title.style.color = ""; // reseta a cor se antes tinha dado erro
+    imgApi.style.visibility = "visible";
   } catch (error) {
     console.error("Erro ao buscar dados:", error);
+    title.textContent = "Erro ao buscar dados";
+    title.style.color = "red";
+    imgApi.style.visibility = "hidden";
   }
 }
+
 
 //Checa se o ano é maior que o ano atual
 function isDataValid(dateString) {
