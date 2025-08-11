@@ -3,6 +3,12 @@
         overflow-x: hidden;
     }
 
+    .main { 
+        margin-top: 50%;
+        
+        width: 70%;
+    }
+
     #imgApi {
         width: 40vh;
     }
